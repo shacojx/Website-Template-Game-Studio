@@ -1,0 +1,4 @@
+[06-Mar-2019 07:28:31 Europe/Bucharest] PHP Notice:  Undefined variable: emailsign in /home/atypical/public_html/portfolio/strider_demo/pages/StriderDark/Particles/php/newsletter-process.php on line 15
+[06-Mar-2019 07:28:31 Europe/Bucharest] PHP Notice:  Undefined variable: emailsign in /home/atypical/public_html/portfolio/strider_demo/pages/StriderDark/Particles/php/newsletter-process.php on line 18
+[07-Mar-2019 22:40:25 Europe/Bucharest] PHP Notice:  Undefined variable: emailsign in /home/atypical/public_html/portfolio/strider_demo/pages/StriderDark/Particles/php/newsletter-process.php on line 15
+[07-Mar-2019 22:40:25 Europe/Bucharest] PHP Notice:  Undefined variable: emailsign in /home/atypical/public_html/portfolio/strider_demo/pages/StriderDark/Particles/php/newsletter-process.php on line 18

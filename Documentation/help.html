@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Strider Documentation</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <a href="#" class="sidebar-brand">
+                    <img src="img/logo.png">
+                </a>
+                <li>
+                    <a href="#start">Start</a>
+                </li>
+                <li>
+                    <a href="#components">File Structure</a>
+                </li>
+                <li>
+                    <a href="#setup">Setting Up</a>
+                </li>
+                <li>
+                    <a href="#html">HTML Structure</a>
+                </li>
+                <li>
+                    <a href="#sections">Sections</a>
+                </li>
+                <li>
+                    <a href="#customization">Customization</a>
+                </li>
+                <li>
+                    <a href="#credits">Resources Used</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row section" style="height: 100vh;">
+                    <a id="start"></a>
+                    <h1>INTRODUCTION</h1>
+                    <hr>
+                     <div class="col-lg-8">
+                        <h3>Hello and Thank you for choosing Strider.</h3>
+                        <br>
+                        <p>Strider is the perfect template for independed developers and studios to showcase their games in a sleek, professional and eye-catching manner.</p>
+                         <p>Built for efficinecy and smoothness with HTML5, CSS3, PHP and Javascript on the Bootstrap 4 framework.</p>
+                         <p>You can edit the template CSS files using any text editor but for the best experience we recommend <a href="http://brackets.io/" target="_blank">Brackets</a> or <a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a></p>
+                         <br>
+                         <h3>What's Included:</h3>
+                         <ul>
+                             <li><p>10 fully functional HTML templates divided into Light and Dark styles with 5 variants each;</p></li>
+                             <li><p>404 Page included with every template;</p></li>
+                             <li><p>FontAwesome icon pack included;</p></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5 class="text-right">Created: 24/02/2018</h5>
+                        <h5 class="text-right">Author: <a href="http://atypicalthemes.com/" target="_blank">Atypical Themes</a></h5>
+                    </div>
+                </div>
+                <div class="row section">
+                    <a id="components"></a>
+                    <h1>FILE STRUCTURE</h1>
+                    <hr>
+                    <div class="col-lg-12">
+                        <p>The main template folder contains the following:</p>
+                        <p><b>StriderLight</b> and <b>StriderDark</b> folders each contain 5 templates: <b>Particles</b>, <b>Slider</b>, <b>Video</b>, <b>Static</b> and <b>Animated.</b></p>
+                        <p>Each template folder contains and <b>index.html</b> file and a <b>404.html</b> file along with the following folders:</p>
+                        <ul>
+                            <li><p><b>CSS</b> - Bootstrap, the main template stylesheet and other css files.</p></li>
+                            <li><p><b>Fonts</b> - FontAwesome Icon font.</p></li>
+                            <li><p><b>Images</b> - Image files and favicons.</p></li>
+                            <li><p><b>Js</b> - Javascript files for bootstrap, smoothscroll, contact-form, animations, lightbox, isotope, and  template custom javascript file Strider.js</p></li>
+                            <li><p><b>Php</b> - Php scripts for contact and newsletter forms.</p></li>
+                        </ul>
+                        <p><b>Dobucmentation</b> is where you found this help file.</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row section">
+                    <div class="col-lg-12">
+                    <a id="setup"></a>
+                    <h1>SETTING UP THE TEMPLATES</h1>
+                    <hr>
+                    <h4>Adding Images:</h4>
+                    <p>Copy your custom images into the <b>images</b> folder and add them to the tempalte by editing the img link inside the template.</p>
+                    <p>An image link looks like this in the code:</p>
+                       <pre class="prettyprint linenums">
+                       
+&#x3C;img src="imgages/yourimage.jpg" class="img-fluid" alt=" "&#x3E;
+                       </pre> 
+                    <br>
+                    <h4>Setting up the hero slider:</h4>
+                    <p>By default the hero slider cycles through 3 images automatically when the bar below the slider fills up.</p>
+                    <p>To change the speed of the slider modify the <b>interval</b> value in slide-bar.js</p>   
+                    <br>
+                    <h4>Adding more slides:</h4>
+                    <p>Adding slides is a simple two step process</p>
+                    <br>
+                    <p>STEP ONE</p>
+                    <p>Open <b>index.html</b> with a text editor and go to the hero section. There you will see this line of code:</p>
+                    <pre class="prettyprint linenums">
+                    
+&#x3C;li data-target="#hero-slider" data-slide-to="2"&#x3E;&#x3C;/li&#x3E;
+                    </pre>
+                    <p>Duplicate this bit of text (copy and paste it on the next line) and change <b>data-slide-to=</b> font 2 to 3. This adds a 4th slide to the backend of the slider.</p>
+                    <br>
+                    <p>STEP TWO</p>
+                    <p>In the same file copy the following text inside the <b>"carousel-inner"</b> div above the "Carousel Controlls" text in the hero section.</p>
+                    <pre class="prettyprint linenums">
+
+&#x3C;div class="carousel-item active"&#x3E;&#x3C;!-- slide --&#x3E; 
+    &#x3C;div class="hero-overlay"&#x3E;&#x3C;/div&#x3E;
+    &#x3C;img class="img-fluid" src="imgages/yourimage.jpg" alt="hero-image"&#x3E;
+    &#x3C;div class="carousel-caption single"&#x3E;
+        &#x3C;h1 class="tagline"&#x3E;YOUR &#x3C;span class="colored"&#x3E;COLORED&#x3C;/span&#x3E; TEXT HERE&#x3C;/h1&#x3E;&#x3C;!-- Tagline --&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;&#x3C;!-- end of slide --&#x3E;
+                    </pre>
+                    <p>The above code contains the image and text of the slide so make sure to link the image and add your own tagline for the slide.</p>
+                    <p>Repeat these two steps for each new slide you wish to add.</p>
+                    <br>
+                    <h4>Animated text:</h4>
+                    <img src="img/light5.jpg" class="image-responsive" style="margin-bottom:25px">
+                    <p>The hero text in the animated template has different ways it can animate.</p>
+                    <p>How the text will animate is controlled by the <b>"animation: fadeInDown"</b> parameter of the HERO TEXT ANIMATION section inside the <b>strider.js</b> file.</p>
+                    <p>In order to change the desired animation simply replace "fadeInDown" with your desired animation paramater.</p>
+                    <p>You can find all the available animation parameters on <a href="https://daneden.github.io/animate.css/">this website</a></p>
+                    <p>The hero slider in the animated template works in the same way as the slider template, the stepts for adding images and slides are exactly the same.</p>
+                    <p><b>Important:</b> Please keep in mind that the slider on the animated tempalte will always start on the second slide.</p>
+                    <p>To change the interval at wich animations and slider will cycle refer to the <b>"speed:"</b> parameter inside the HERO TEXT ANIMATION section of <b>strider.js</b></p>    
+                    <br>
+                    <h4>Setting up the fullscreen video:</h4>
+                    <p>The video included in the template is an mp4 video with 1280x720 resolution at 29fps. The supported video formats are <b>mp4</b> ,     <b>WebM</b> and <b>ogg</b>.</p>
+                    <p>When using video, loading times are very important so try to find a ballance between quality and size and limit your video to under 30mb in size.</p>
+                    <p>Place your video file inside the <b>images</b> folder. Open <b>index.html</b> with a text editor and navigate to the hero section, here you will find the following lines of code:</p>
+                    <pre class="prettyprint linenums">
+                    
+&#x3C;video autoplay loop poster="images/poster.jpg" id="bgvid" class="img-fluid"&#x3E;
+    &#x3C;source src="images/bgvid.mp4" type="video/mp4"&#x3E;
+&#x3C;/video&#x3E;
+                    </pre>
+                    <p>Now replace <b>bgvid.mp4</b> with the name of your video file and also change "mp4" in the line <b>type="video/mp4"</b>  with ogg or webm if you are using one of those formats.</p>
+                    <p>If the video cannot be loaded the template will load a poster image instead. So create a .jpg image file and name it <b>poster.jpg</b> and paste it in the <b>images</b> folder.</p>
+                    <p>By default the video will autoplay and loop, defined by the <b>autoplay</b> and <b>loop</b> parameters inside the video tag.</p>
+                    <br>
+                    <h4>Contact &amp; Newsletter Forms</h4>
+                    <p>To reviece emails from the contact form change the line $EmailTo = "youremail@domain.com" to your desired email adress in the <b>form-process.php</b> file. </p>
+                    <p>In order to recieve emails from the newsletter form simply repeat the process inside the <b>newsletter-process.php</b> file this time. </p>
+                    <br>
+                    <p>If you want to change the input filed names you will have to update them in the following files:</p>
+                        <ul>
+                            <li>index.html, Strider.js, form-process.php</li>
+                        </ul>
+                    <br>
+                    <h4>Using The Custom 404 Page</h4>
+                    <p>Strider comes with a custom 404 page. Depending on your hosting service provider you may or may not be able to use custom 404 pages.</p>
+                    <p>Here is a handy <a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-custom-404-page-in-apache" target="_blank">TUTORIAL</a> on setting up a custom 404 page courtesy of DigitalOcean.</p>
+                </div>
+            </div>
+                <div class="row section">
+                    <div class="col-lg-12">
+                    <a id="html"></a>
+                    <h1>HTML STRUCTURE</h1> 
+                    <hr>
+                    <h4>The <b>index.html</b> file looks like this:</h4>
+                    <pre class="prettyprint linenums">
+                    
+&#x3C;!DOCTYPE html&#x3E;
+    &#x3C;html&#x3E;
+    &#x3C;head&#x3E;
+      ...
+    &#x3C;/head&#x3E;
+        &#x3C;body&#x3E;
+            &#x3C;!-- Loading Screen --&#x3E;
+            &#x3C;div id="loader-wrapper"&#x3E;
+                &#x3C;div id="loader"&#x3E;&#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;!-- HEADER --&#x3E;
+            &#x3C;header id="main-header"&#x3E;            
+              ...
+            &#x3C;/header&#x3E;
+            &#x3C;section id="...section"&#x3E;         
+              ...
+            &#x3C;/section&#x3E;
+            &#x3C;!-- FOOTER --&#x3E;
+            &#x3C;footer id="main-footer"&#x3E;       
+              ...
+            &#x3C;/footer&#x3E;
+        &#x3C;/body&#x3E;
+    &#x3C;/html&#x3E;
+                    </pre>
+                    <br>
+                    <h4>Header</h4>
+                    <p>The header code looks like this:</p>
+                    <pre class="prettyprint linenums">
+    
+&lt;!-- //// HEADER //// --&gt;
+    &lt;header id="main-header"&gt;
+        &lt;nav class="navbar fixed-top navbar-expand-lg navbar-dark"&gt;
+            &lt;div class="container"&gt;
+                &lt;!-- Site Logo --&gt;
+                &lt;a id="logo" class="navbar-brand" href="#"&gt;&lt;img class="img-fluid" src="images/logo.svg" alt="site logo"&gt;&lt;/a&gt;
+                &lt;!-- Dropdown Button --&gt;
+                &lt;button id="hamburger" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
+                        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;!-- Navigation Links --&gt;
+                &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                    &lt;ul class="navbar-nav ml-auto"&gt;
+                        &lt;li class="nav-item active"&gt;
+                            &lt;a class="nav-link" href="#about"&gt;About&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#games"&gt;Games&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#team"&gt;Team&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#careers"&gt;Careers&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#contact"&gt;Contact&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;&lt;!-- Header End --&gt;
+                    </pre>
+                    <br>
+                    <h4>Footer</h4>
+                    <p>The footer code looks like this:</p>
+                    <pre class="prettyprint linenums">
+                    
+    &lt;!-- /// FOOTER /// --&gt;
+    &lt;footer id="main-footer"&gt;
+        &lt;div id="footer"&gt; 
+            &lt;div class="container"&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="col-md-12"&gt;
+                        &lt;p id="copyright"&gt;&amp;copy; Atypical Themes &lt;script type="text/javascript"&gt;
+  document.write(new Date().getFullYear());
+&lt;/script&gt;&lt;/p&gt;&lt;!-- Copyright Text --&gt;
+                        &lt;ul class="social-links"&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-facebook fa-lg icon-social"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-twitter  fa-lg icon-social"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-google-plus fa-lg icon-social"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-linkedin fa-lg icon-social"&gt;&lt;/i&gt;&lt;/a&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-pinterest fa-lg icon-social"&gt;&lt;/i&gt;&lt;/a&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-instagram fa-lg icon-social"&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;&lt;!-- Container End --&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;&lt;!-- Footer End --&gt;
+                    </pre>
+                    </div>
+                </div>
+                <div class="row section">
+                    <a id="sections"></a>
+                    <h1>SECTIONS</h1>
+                    <hr>
+                    <div class="col-lg-12">
+                        <p>Each template is divided into the following sections and subsections:</p>
+                        <ul>
+                            <li><p><b>Hero</b> Section</p></li>
+                            <li><p><b>About</b> Section</p></li>
+                            <li><p><b>Games</b> Section</p></li>
+                            <li><p><b>Team</b> Section</p></li>
+                            <li style="margin-left: 15px;"><p>- Studio</p></li>
+                            <li><p><b>Careers</b> Section</p></li>
+                            <li style="margin-left: 15px;"><p>- Newsletter</p></li>
+                            <li><p><b>Contact</b> Section</p></li>
+                        </ul>
+                        <br>
+                        <h4>A section looks like this:</h4>
+                        <pre class="prettyprint linenums">
+                        
+    &#x3C;div id="about-section" class="large-margin"&#x3E;
+        ...
+        ...
+        ...
+    &#x3C;/div&#x3E;
+                        </pre>
+                        <p>The "large-margin" class sets the bottom margin of the section.</p>
+                        <br>
+                        <p>You can customize section margins individualy, three margin classes can be used to modify the bottom margin of each section:</p>
+                        <ul style="margin-top: 20px; margin-bottom: 20px;">
+                            <li><b>tiny-margin</b> - 1.5em (24px)</li>
+                            <li><b>small-margin</b> - 3em (48px)</li>
+                            <li><b>medium-margin</b> - 6em (96px)</li>
+                            <li><b>large-margin</b> - 12em (192px)</li>
+                        </ul>
+                        <p>You can change the value of each margin class by going into the <b>style.css</b> file.</p>
+                        <p><b>!Note that the em and rem values in this template are calculated for a 16px base font-size!</b></p>
+                        <p>You can change the base font-size of the template by opening style.css and navigating to the "body" class.</p>
+                        <br>
+                     </div>
+                </div>
+                <div class="row section">
+                    <div class="col-lg-12">
+                        <a id="customization"></a>
+                        <h1>CUSTOMIZATION</h1>
+                        <hr>  
+                        <h4>Changing Colors</h4>
+                        <p>Changing the main color of the template is an easy process:</p>
+                        <ol>
+                            <li><p>Open style.css with your prefered text editor;</p></li>
+                            <li><p>Press Ctrl+F (Cmd + F on mac) on your keyboard;</p></li>
+                            <li><p>Type the color codes below into the search box and replace the values with your custom color;</p>
+                            <li><p>For the light version: #E84118;</p>
+                            <li><p>For the dark version: #E48632;</p>
+                        </ol>
+                        <br>
+                        
+                        <h4>Adding Games</h4>
+                        <p>In order to add more games to the portfolio you need to duplicate the "row game-card" div element shown here:</p>
+                        <pre class="prettyprint linenums">
+    &lt;div class="row game-card pc"&gt;&lt;!-- Game Card --&gt;
+        &lt;div class="col-lg-12 col-xl-5 game-card-left"&gt;
+            &lt;a href="images/game1_large.jpg" data-lightbox="screenshots_aurora"&gt;
+                &lt;div class="overlay"&gt;
+                    &lt;i class="fa fa-picture-o fa-3x"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;picture&gt;
+                    &lt;source media="(min-width: 1200px)" srcset="images/game1.jpg"&gt;
+                    &lt;source media="(min-width: 768px)" srcset="images/game1_large.jpg"&gt;
+                    &lt;img src="images/game1.jpg" class="img-fluid" alt="aurora image"&gt;
+                &lt;/picture&gt;
+            &lt;/a&gt;
+            &lt;a href="images/game1.1.jpg" data-lightbox="screenshots_aurora"&gt;&lt;/a&gt;
+            &lt;a href="images/game1.2.jpg" data-lightbox="screenshots_aurora"&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="col-lg-12 col-xl-7 game-card-right"&gt;
+            &lt;h2&gt;AURORA AWAKENING&lt;br&gt;&lt;span class="sub-text"&gt;&lt;span class="colored"&gt;Action RPG&lt;/span&gt; | PC&lt;/span&gt;&lt;/h2&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur ... massa tincidunt. &lt;span class="expand colored strong" data-toggle="modal" data-target="#game1"&gt;Read More&lt;/span&gt;&lt;/p&gt;
+            &lt;a href="#" class="steam-btn"&gt;
+                &lt;i class="fa fa-steam fa-3x"&gt;&lt;/i&gt;
+                &lt;p&gt;GET IT ON &lt;br&gt;&lt;span class="spaced"&gt;STEAM&lt;/span&gt;&lt;/p&gt;
+            &lt;/a&gt;
+            &lt;div class="reviews"&gt;
+                &lt;a href="#"&gt;&lt;div class="score-card"&gt;
+                    &lt;p class="score colored"&gt;8.5&lt;/p&gt;
+                    &lt;p&gt;Gamespot&lt;/p&gt;
+                &lt;/div&gt;&lt;/a&gt;
+                &lt;a href="#"&gt;&lt;div class="score-card"&gt;
+                    &lt;p class="score colored"&gt;8.1&lt;/p&gt;
+                    &lt;p&gt;IGN&lt;/p&gt;
+                &lt;/div&gt;&lt;/a&gt;
+                &lt;a href="#"&gt;&lt;div class="score-card"&gt;
+                    &lt;p class="score colored"&gt;83&lt;/p&gt;
+                    &lt;p&gt;Metacritic&lt;/p&gt;
+                &lt;/div&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Modal --&gt;
+        &lt;div class="modal fade game-modal" id="game1" tabindex="-1" role="dialog" aria-labelledby="aurora" aria-hidden="true"&gt;
+            &lt;div class="modal-dialog modal-lg" role="document"&gt;
+                &lt;div class="modal-content"&gt;
+                    &lt;div class="modal-header"&gt;
+                        &lt;h2 class="modal-title" id="aurora"&gt;AURORA AWAKENING&lt;/h2&gt;
+                        &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+                        &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                   &lt;div class="modal-body"&gt;
+                       &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit... Curabitur imperdiet dolor eget cursus efficitur.&lt;/p&gt;
+                       &lt;br&gt;
+                       &lt;h3 class="colored"&gt;EXPLORE AN EXPANSIVE WORLD&lt;/h3&gt;
+                       &lt;p&gt;Integer eget diam felis... quis convallis eros laoreet ac.&lt;/p&gt;
+                       &lt;img class="img-fluid" src="images/game1.1.jpg"&gt;
+                       &lt;br&gt;
+                       &lt;h3 class="colored"&gt;ADAPT AND DEVELOP YOUR CHARACTER&lt;/h3&gt;
+                       &lt;p&gt;Suspendisse... Donec condimentum magna sit amet viverra convallis. Fusce accumsan efficitur orci a commodo.&lt;/p&gt;
+                       &lt;img class="img-fluid" src="images/game1.2.jpg"&gt;
+                       &lt;br&gt;
+                       &lt;h3 class="colored"&gt;GET IMMERSED IN A DEEP STORY&lt;/h3&gt;
+                       &lt;p&gt;Mauris at sapien nibh. Integer... Proin eros massa, ullamcorper eget rutrum eu, feugiat id purus.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="modal-footer"&gt;
+                        &lt;button type="button" class="button secondary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- Game Card End --&gt;
+                        </pre>
+                        <br>
+                        <p>Make sure the modal id is the same as the data-target in the "read more" link in the game description like so:</p>
+                        <pre class="prettyprint linenums">
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. luctus consectetur. &lt;span class="expand colored strong" data-toggle="modal" data-target="#game1"&gt;Read More&lt;/span&gt;&lt;/p&gt;
+    ...
+    &lt;div class="modal fade game-modal" id="game1" tabindex="-1" role="dialog" aria-labelledby="aurora" aria-hidden="true"&gt;
+                        </pre>
+                        <p>In this case notice how the modal id and the data-target are the same <b>"game1"</b>.</p>
+                        <p>Every new game added needs a unique id like "game2", "game3" etc.</p>
+                        <br>
+                        <h4>Emveded Videos</h4>
+                        <p>To embed videos in the game description modals you need to copy the youtube embed link...</p>
+                        <img src="img/img3.jpg" style="margin: 5px 0;">
+                        <p>...and paste it inside the iframe of the game description modal.</p>
+                        <img src="img/img4.jpg" style="margin: 5px 0;">
+                        <br><br>
+                        <h4>Game Portfolio Tags</h4>
+                        <p>The games in the portfolio can be sorted by tags, changing the tag names is a simple process:</p>
+                        <p>Navigate to the games section in the index.html file, here you will find this code:</p>
+                        <pre class="prettyprint linenums">
+    &lt;ul class="game-tags"&gt;
+        &lt;li&gt;&lt;a href="#" data-filter="*"&gt;ALL&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" data-filter=".pc"&gt;PC&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" data-filter=".mobile"&gt;ANDROID / IOS&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+                        </pre>
+                        <p>As you can see the name of the tags is set inside the <b>data-filter</b> attribute so that is what you need to change.</p>
+                        <p>To add a new tag just duplicate the last line of code and name your new tag, like so:</p>
+                        <pre class="prettyprint linenums">
+    &lt;ul class="game-tags"&gt;
+        &lt;li&gt;&lt;a href="#" data-filter="*"&gt;ALL&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" data-filter=".pc"&gt;PC&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" data-filter=".mobile"&gt;ANDROID / IOS&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" data-filter=".console"&gt;XBOX ONE / PS4&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+                        </pre>
+                        <br>
+                        <p>Next we need to change the class of the game to our tag name, to do this we locate this code in the 
+games section:</p>
+                        <pre class="prettyprint linenums">
+                        
+   &#x3C;div class="row game-card mobile"&#x3E;&#x3C;!-- Game Card --&#x3E;
+   ...
+   ...                  
+                        </pre>
+                        <p>As you can see this item has the class name of mobile which means its part of the "mobile" tag. In your case you would replace "mobile" with your tag name.</p>
+                        
+                        <br>
+                        <h4>Social Media</h4>
+                        <p>If you want to control the way the posts look like when you share the landing page on social media (Facebook, Google+ and LinkedIn especially) don't forget to update the OG Meta Tags</p>
+                        <p>To add more social icons in the footer please the footer section in the index.html file accordingly and add your preferred icons from the <a href="http://fontawesome.io/icons/" target="_blank">FontAwesome library</a>.</p>
+                                                
+                        <br>
+                        <h4>Custom Particles</h4>
+                        <p>You can customize the particles in the hero section of the apropriate template with a simple three step process:</p>
+                        <img src="img/img1.jpg" class="image-responsive" style="margin-bottom:25px">
+                        <p><b>Step 1: </b>Go to <a href="https://vincentgarreau.com/particles.js/" target="_blank">the particles.js website</a> and use the options to create your custom particles template.</p>
+                        <img src="img/img2.jpg" class="image-responsive" style="margin-bottom:25px">
+                        <p><b>Step 2:</b> When you are happy with your particles template download it by clicking the "download current config" button.</p>
+                        <img src="img/img3.png" class="image-responsive" style="margin-bottom:25px">
+                        <p><b>Step 3:</b> Open the file you just downloaded and copy its contents into the <b>"Strider.js"</b> file of the template, under the <b>"PARTICLES"</b> section.</p>
+                        <pre class="prettyptrint linenums">
+    //PARTICLES
+    particlesJS("particles-web",  
+    ---------- Paste your code under this line -----------
+        {
+          "particles": {
+            "number": {
+              "value": 120,
+              "density": {
+                "enable": true,
+                "value_area": 800
+              }
+            },
+            "color": {
+              "value": "#e67e22"
+            },
+            "shape": {
+              "type": "circle",
+              "stroke": {
+                "width": 0,
+                "color": "#000000"
+              }, ...
+
+                        </pre>
+                        <p>Don't worry about overwriting the code, that's what we want.</p>
+                        
+                        <br>
+                        <h4>Hero Image Overlay</h4>
+                        <p>The hero images in every template (including the video) have an opacity filter over then to improve readability. To change the value of this filter navigate to the hero section in style.css and edit the linear gradient value (it can range from 0.1 to 1)</p>
+                        <pre class="prettyprint linenums">
+                        
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/hero.jpg);
+                        </pre>
+                        <br>
+                        <p><b>Example:</b></p>
+                        <div class="col-md-6">
+                            <img src="img/overlay1.jpg" style="margin-bottom: 5px;">
+                            <p>0.2 Opacity</p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="img/overlay2.jpg" style="margin-bottom: 5px;">
+                            <p>0.8 Opacity</p>
+                        </div>
+                </div>
+            </div>
+                <div class="row section">
+                    <div class="col-lg-12">
+                        <a id="credits"></a>
+                        <h1>RESOURCES USED</h1>
+                        <hr>
+                        <p>Fonts - <a href="https://fonts.google.com/specimen/Raleway" target="_blank">Raleway</a>, <a href="https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans" target="_blank">Open Sans</a> and <a href="https://www.behance.net/gallery/33704618/ANURATI-Free-font?utm_source=the-webdesigner.co&utm_medium=newsletter" target="_blank">Anurati Free Font</a> by Emmeran Richard</p>
+                        <p>Icons - <a href="http://fontawesome.io/" target="_blank">FontAwesome</a></p>
+                        <p>Custom Maps - <a href="https://snazzymaps.com/" target="_blank">Snazzymaps</a></p>
+                        <p><a href="http://getbootstrap.com/" target="_blank">Bootstrap 4</a></p>
+                        <p><a href="http://isotope.metafizzy.co/" target="_blank">Isotope</a></p>
+                        <p><a href="http://lokeshdhakar.com/projects/lightbox2/#examples" target="_blank">Lightbox</a></p>
+                        <p><a href="https://github.com/1000hz/bootstrap-validator" target="_blank">Bootstrap Validator</a></p>
+                        <p><a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank">Subtlepatterns</a></p>
+                        <p><a href="https://vincentgarreau.com/particles.js/" target="_blank">Particles.js</a></p>
+                        <p><a href="http://jquery.com/download/" target="_blank">JQuery 3.2.1</a></p>
+                        <br>
+                    </div>
+                </div>
+                <div class="row section">
+                    <div class="col-lf-12">
+                        <a id="support"></a>
+                        <h1>SUPPORT</h1>
+                        <hr>
+                        <p>For any support questions or suggestions please feel free to email us at <a href="support@atypicalthemes.com">support@atypicalthemes.com</a> </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr>
+                    <p class="subtle" style="margin-bottom: 0;">Strider Game Stuio Template by <a href="http://atypicalthemes.com/" traget="_blank">AtypicalThemes</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- Google Prettify Script -->
+     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&amp;skin=sons-of-obsidian"></script>
+    
+    <!-- Smooth Scroll -->  
+     <script src="js/scroll.js"></script>
+
+
+</body>
+
+</html>
